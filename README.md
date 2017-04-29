@@ -1,4 +1,4 @@
-# single-board-test
+# single-board-test : Test program used in factroy testing farm.
 
 environment setup:
 need 2 PATH: toolchain base path and other open source lib binary and include files base path.
