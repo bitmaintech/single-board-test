@@ -1470,6 +1470,7 @@ unsigned int swap_uint32(unsigned int a)
 	return b;
 }
 
+#ifdef NEED_AUTH_SEARCHFREQ
 bool PostRate(int hashrate)
 {
 	char logstr[256];
@@ -1574,6 +1575,7 @@ bool isAuthToRun()
 		free(ret_str);
 	return false;
 }
+#endif
 
 int run_cmd(char *cmdline)
 {
@@ -10918,6 +10920,7 @@ void ClearLogInfo()
 		fclose(fd);
 }
 
+#ifdef NEED_AUTH_SEARCHFREQ
 void DoAuthOnce()
 {
 	char logstr[256];
@@ -10976,6 +10979,7 @@ void DoPostRate(int total_rate)
 			ClearLogInfo();
 	}while(!ret);
 }
+#endif
 
 int main(int argc, char* argv[])
 {
